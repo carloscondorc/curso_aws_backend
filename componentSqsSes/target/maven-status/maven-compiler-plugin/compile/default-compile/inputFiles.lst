@@ -1,0 +1,10 @@
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\App.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\model\FeedBack.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\service\IColaSQSService.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\controller\StatusController.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\service\impl\EmailServiceImpl.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\service\impl\SQSServiceImpl.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\service\IEmailService.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\model\Problema.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\JmsConfig.java
+D:\source_microservicios\curso_aws_backend\componentSqsSes\src\main\java\aws\mitocode\spring\dto\SNSMessage.java

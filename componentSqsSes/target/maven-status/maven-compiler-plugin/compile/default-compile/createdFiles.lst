@@ -1,0 +1,10 @@
+aws\mitocode\spring\JmsConfig.class
+aws\mitocode\spring\service\impl\EmailServiceImpl.class
+aws\mitocode\spring\service\IEmailService.class
+aws\mitocode\spring\service\impl\SQSServiceImpl.class
+aws\mitocode\spring\App.class
+aws\mitocode\spring\dto\SNSMessage.class
+aws\mitocode\spring\model\Problema.class
+aws\mitocode\spring\service\IColaSQSService.class
+aws\mitocode\spring\model\FeedBack.class
+aws\mitocode\spring\controller\StatusController.class

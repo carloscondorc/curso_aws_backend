@@ -1,0 +1,4 @@
+aws\mitocode\spring\SwaggerConfig.class
+aws\mitocode\spring\SecurityConfiguration.class
+aws\mitocode\spring\security\AwsCognitoJwtAuthenticationFilter.class
+aws\mitocode\spring\security\AwsCognitoRSAKeyProvider.class

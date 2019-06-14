@@ -1,0 +1,12 @@
+aws\mitocode\spring\dto\RespuestaApi.class
+aws\mitocode\spring\dto\UpdatePasswordDTO.class
+aws\mitocode\spring\App.class
+aws\mitocode\spring\service\SecurityService.class
+aws\mitocode\spring\dto\UserAttributesCognito.class
+aws\mitocode\spring\dto\LoginDTO.class
+aws\mitocode\spring\controller\api\ApiSecurityController.class
+aws\mitocode\spring\dto\BasicAccessDTO.class
+aws\mitocode\spring\util\Utilitario.class
+aws\mitocode\spring\controller\StatusController.class
+aws\mitocode\spring\dto\RenewPasswordFirstDTO.class
+aws\mitocode\spring\service\SecurityServiceImpl.class
