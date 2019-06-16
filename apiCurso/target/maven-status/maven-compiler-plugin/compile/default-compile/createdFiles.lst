@@ -1,0 +1,8 @@
+aws\mitocode\spring\model\Curso.class
+aws\mitocode\spring\dto\RespuestaApi.class
+aws\mitocode\spring\service\ICursoService.class
+aws\mitocode\spring\controller\api\ApiCursoController.class
+aws\mitocode\spring\App.class
+aws\mitocode\spring\controller\StatusController.class
+aws\mitocode\spring\dao\ICursoDao.class
+aws\mitocode\spring\service\impl\CursoServiceImpl.class
