@@ -10,7 +10,7 @@ import aws.mitocode.spring.model.Curso;
 import aws.mitocode.spring.service.ICursoService;
 
 @Service
-public class ProblemaServiceImpl implements ICursoService {
+public class CursoServiceImpl implements ICursoService {
 
 	@Autowired
 	private ICursoDao cursoDao;

@@ -52,6 +52,7 @@ public class ApiEncuestaController {
 		}
 	}
 	
+	
 	@PostMapping(value="registrar", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<RespuestaApi> guardarFeedBack(
 			@RequestBody Encuesta curso){
