@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-LABEL maintainer="w.marchanaranda@gmail.com"
+LABEL maintainer="carlos.condor@outlook.com"
 WORKDIR /workspace
 ADD target/api*.jar app.jar
 

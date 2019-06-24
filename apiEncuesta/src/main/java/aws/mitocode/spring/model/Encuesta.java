@@ -15,27 +15,16 @@ import javax.persistence.Table;
 @Table(name = "encuesta")
 public class Encuesta implements Serializable {
 
-	private static final long serialVersionUID = -1725563866279171711L;
+	private static final long serialVersionUID = -5649483795555803715L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name = "nombres", nullable = false)
-	private String nombres;
-	
-	@Column(name = "apellidos", nullable = false)
-	private String apellidos;
-	
-	@Column(name = "edad", nullable = false)
-	private int edad;
-	
-	@Column(name = "profesion", nullable = false)
-	private String profesion;
-	
-	@Column(name = "lugar_trabajo", nullable = false)
-	private String lugar_trabajo;
-	
+	@OneToOne
+	@JoinColumn(name = "id_persona", nullable = false)
+	private Persona persona;
+
 	@OneToOne
 	@JoinColumn(name = "id_curso", nullable = false)
 	private Curso curso;
@@ -48,44 +37,12 @@ public class Encuesta implements Serializable {
 		this.id = id;
 	}
 
-	public String getNombres() {
-		return nombres;
+	public Persona getPersona() {
+		return persona;
 	}
 
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
-	}
-
-	public String getApellidos() {
-		return apellidos;
-	}
-
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
-
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-
-	public String getProfesion() {
-		return profesion;
-	}
-
-	public void setProfesion(String profesion) {
-		this.profesion = profesion;
-	}
-
-	public String getLugar_trabajo() {
-		return lugar_trabajo;
-	}
-
-	public void setLugar_trabajo(String lugar_trabajo) {
-		this.lugar_trabajo = lugar_trabajo;
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 	public Curso getCurso() {
@@ -95,9 +52,5 @@ public class Encuesta implements Serializable {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
-
-	
-
-
 
 }

@@ -11,6 +11,6 @@ import aws.mitocode.spring.model.Encuesta;
 public interface IEncuestaService {
 
 	Page<Encuesta> obtenerDatosPaginados(Pageable pageable, String usuario, Collection<GrantedAuthority> ltaRoles);
-	void guardarDatos(Encuesta feedback);
+	void guardarDatos(Encuesta encuesta);
 	void eliminarDatos(int id);
 }

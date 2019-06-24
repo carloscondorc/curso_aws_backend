@@ -28,7 +28,7 @@ public class SwaggerConfig {
     
     private ApiInfo apiInfo() {
         return new ApiInfo(
-          "RestApi GeoServicios", 
+          "RestApi Encuestas", 
           "Servicios Rest para el curso Mitocode", 
           "API ToS", 
           "Terms of service", 

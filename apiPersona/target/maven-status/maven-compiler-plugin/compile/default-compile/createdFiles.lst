@@ -1,0 +1,8 @@
+aws\mitocode\spring\dao\IPersonaDao.class
+aws\mitocode\spring\model\Persona.class
+aws\mitocode\spring\dto\RespuestaApi.class
+aws\mitocode\spring\service\IPersonaService.class
+aws\mitocode\spring\controller\api\ApiPersonaController.class
+aws\mitocode\spring\App.class
+aws\mitocode\spring\controller\StatusController.class
+aws\mitocode\spring\service\impl\PersonaServiceImpl.class
