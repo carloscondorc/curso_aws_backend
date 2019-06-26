@@ -10,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 
 import aws.mitocode.spring.dao.IEncuestaDao;
+import aws.mitocode.spring.dao.IPersonaDao;
 import aws.mitocode.spring.model.Encuesta;
 import aws.mitocode.spring.service.IEncuestaService;
 @Service
@@ -19,6 +20,10 @@ public class EncuestaServiceImpl implements IEncuestaService {
 
 	@Autowired
 	private IEncuestaDao encuestaDao;
+	
+	@Autowired
+	private IPersonaDao personaDao;
+	
 	
 	@Override
 	public Page<Encuesta> obtenerDatosPaginados(Pageable pageable, String usuario, Collection<GrantedAuthority> ltaRoles) {
@@ -39,12 +44,16 @@ public class EncuestaServiceImpl implements IEncuestaService {
 	}
 
 	@Override
-	public void guardarDatos(Encuesta curso) {
+	public void guardarDatos(Encuesta encuesta) {
 		
 		try {
-		encuestaDao.save(curso);
+			
+
+		encuestaDao.save(encuesta);
+		
+		
 		}catch(Exception e) {
-			logger.info("Error al guardar datos a rn BD");
+			logger.info("Error al guardar encuestas datos a rn BD");
 		}
 	}
 

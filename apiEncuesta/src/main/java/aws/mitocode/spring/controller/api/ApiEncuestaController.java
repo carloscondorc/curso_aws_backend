@@ -25,7 +25,6 @@ import aws.mitocode.spring.dto.RespuestaApi;
 import aws.mitocode.spring.model.Encuesta;
 import aws.mitocode.spring.model.Curso;
 import aws.mitocode.spring.service.IEncuestaService;
-import aws.mitocode.spring.service.ICursoService;
 
 @RestController
 @CrossOrigin
@@ -36,9 +35,6 @@ public class ApiEncuestaController {
 	
 	@Autowired
 	private IEncuestaService encuestaService;
-	
-	@Autowired
-	private ICursoService cursoService;
 	
 	@GetMapping(value="listar", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> obtenerTodos(Pageable pageable){
@@ -54,12 +50,24 @@ public class ApiEncuestaController {
 	
 	
 	@PostMapping(value="registrar", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<RespuestaApi> guardarFeedBack(
-			@RequestBody Encuesta curso){
+	public ResponseEntity<RespuestaApi> guardarEncuesta(
+			@RequestBody Encuesta encuesta){
 		try {
 			User usuario = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 			//feedback.setIdUsuario(usuario.getUsername());
-			encuestaService.guardarDatos(curso);
+			logger.error("controller registrar: ");
+			
+			
+			logger.info("Nombres: {} ",encuesta.getPersona().getNombres());
+			logger.info("Apellidos:{} ",encuesta.getPersona().getApellidos());
+			logger.info("Edad:{} ",encuesta.getPersona().getEdad());
+			logger.info("Profesion:{} ",encuesta.getPersona().getProfesion());
+			logger.info("Persona:{} ",encuesta.getPersona().getLugar_trabajo());
+			
+			logger.info("Curso ID:{} ",encuesta.getCurso().getId());
+			logger.info("Curso Nombre:{} ",encuesta.getCurso().getCurso());
+			
+			encuestaService.guardarDatos(encuesta);
 			return new ResponseEntity<RespuestaApi>(new RespuestaApi("OK",""), HttpStatus.OK);
 		}catch(Exception e) {
 			logger.error("Error: ",e);
@@ -76,16 +84,8 @@ public class ApiEncuestaController {
 		}catch(Exception e) {
 			logger.error("Error: ",e);
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		
 	}
-	
-	@GetMapping(value="curso/listar", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Curso>> obtenerTodos(){
-		try {
-			return new ResponseEntity<List<Curso>>(cursoService.obtenerTodos(), HttpStatus.OK);
-		}catch(Exception e) {
-			logger.error("Error: ",e);
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+
 	}
 }
