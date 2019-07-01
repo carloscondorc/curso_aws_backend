@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import aws.mitocode.spring.dao.IEncuestaDao;
 import aws.mitocode.spring.dao.IPersonaDao;
 import aws.mitocode.spring.model.Encuesta;
+import aws.mitocode.spring.model.Persona;
 import aws.mitocode.spring.service.IEncuestaService;
 @Service
 public class EncuestaServiceImpl implements IEncuestaService {
@@ -45,11 +46,21 @@ public class EncuestaServiceImpl implements IEncuestaService {
 
 	@Override
 	public void guardarDatos(Encuesta encuesta) {
-		
+		     Persona persona = new Persona();
+		    //Encuesta encuestain = new Encuesta();
+		    		 
 		try {
 			
 
-		encuestaDao.save(encuesta);
+			persona.setNombres(encuesta.getPersona().getNombres());
+			persona.setApellidos(encuesta.getPersona().getApellidos());
+			persona.setEdad(encuesta.getPersona().getEdad());
+			persona.setProfesion(encuesta.getPersona().getProfesion());
+			persona.setLugar_trabajo(encuesta.getPersona().getLugar_trabajo());
+			persona=personaDao.save(persona);
+			
+			encuesta.getPersona().setId(persona.getId());
+			encuestaDao.save(encuesta);
 		
 		
 		}catch(Exception e) {

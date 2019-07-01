@@ -39,8 +39,8 @@ public class PersonaServiceImpl implements IPersonaService {
 	}
 
 	@Override
-	public void guardarDatos(Persona curso) {
-		this.personaDao.save(curso);
+	public void guardarDatos(Persona persona) {
+		this.personaDao.save(persona);
 		
 	}
 
